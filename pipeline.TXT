@@ -1,0 +1,5 @@
+osmconvert macedonia-latest.osm -b=10.5,49,11.5,50 -o=macedonia-latest.o5m | osmfilter macedonia-latest.o5m --keep"building=university" -o=unversities.o5m | osmconvert --all-to-nodes --csv="@id @lon @lat addr:street"
+
+The coordinates of the filter will change according to the ones taken from the current location selected by the user from the
+application. We're setting up a square boundry around the user to only get the objects that are close to them.
+Also the building type will be changed accoring to what the user has selected during the search.
